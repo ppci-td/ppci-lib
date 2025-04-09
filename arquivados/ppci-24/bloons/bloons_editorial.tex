@@ -1,0 +1,81 @@
+Para resolver o problema, pode-se utilizar programação dinâmica, considerando cada balão de forma independente. Assim, para cada balão, queremos encontrar a quantidade mínima de dardos para destruí-lo, usando os dados disponíveis. Vamos definir:
+
+\[
+\begin{align*}
+dp[x]: &\ \text{o número mínimo de dardos necessários para destruir um balão com} \\
+       &\ \text{resistência } x.
+\end{align*}
+\]
+
+\[
+dp[0] = 0,
+\]
+já que para um balão com 0 camadas de resistência, não precisamos de nenhum dardo.
+
+Para valores maiores de resistência, definimos \(dp[x] = \infty\), representando que ainda não sabemos como destruir aquele balão.
+
+O estado de transição será:
+Para cada camada \(x\) e cada macaco distinto com dano \(d_j\), se for possível usar o macaco \((x \geq d_j)\), então podemos atualizar o número mínimo de dardos:
+
+\[
+dp[x] = \min(dp[x], dp[x - d_j] + 1)
+\]
+
+Essa transição verifica se podemos destruir o balão com resistência \(x\) usando um dardo que destrói \(d_j\) camadas e o número mínimo de dardos necessários para destruir um balão de resistência \(x - d_j\).
+
+Assim, para cada dardo \(d_j\) disponível, atualizamos o array \(dp\) para cada resistência de balão possível \(dp[x]\). Se, ao final do processo, \(dp[h_i] = \infty\), isso significa que não é possível destruir o balão de resistência \(h_i\) com os dardos disponíveis, então retornamos -1. Caso contrário, somamos o total de dardos mínimos necessários para destruir todos os balões.
+
+
+\newpage
+
+\section*{Código}
+
+\begin{lstlisting}[language=C++]
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+const ll INF = INT_MAX;
+
+int main() {
+    ll N, K;
+    ll MaximoDeCamadas = 1000;
+    
+    cin >> N >> K;
+    
+    vector<ll> baloes(N);
+    vector<ll> macacos(K);
+
+    for (ll i = 0; i < N; ++i) {
+        cin >> baloes[i];
+    }
+
+    for (ll i = 0; i < K; ++i) {
+        cin >> macacos[i];
+    }
+    
+    vector<ll> dp(MaximoDeCamadas + 1, INF);
+    dp[0] = 0;
+
+    for (ll h = 1; h <= MaximoDeCamadas; ++h) {
+        for (ll d : macacos) {
+            if (h >= d && dp[h - d] != INF) {
+                dp[h] = min(dp[h], dp[h - d] + 1);
+            }
+        }
+    }
+
+    ll total_macacos = 0;
+    for (ll h : baloes) {
+        if (dp[h] == INF) {
+            cout << -1 << endl;
+            return 0;
+        }
+        total_macacos += dp[h];
+    }
+    
+    cout << total_macacos << endl;
+    return 0;
+}
+\end{lstlisting}
+
+Complexidade O(N+K)

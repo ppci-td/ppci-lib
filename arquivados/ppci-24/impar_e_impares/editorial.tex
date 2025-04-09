@@ -1,0 +1,11 @@
+O primeiro passo da resolução é lembrar que a soma entre um número ímpar com um número par resultará em um número ímpar. O próximo passo é sempre utilizar o maior valor de ímpar possível para realizar a operação e perceper que a soma se tornará o maior ímpar do vetor.
+
+O menor número de operações será pelo menos igual ao número de pares, portanto podemos realizar as operações nos números pares em ordem crescente e com isso garantir que o valor ímpar da operação é o maior possível.
+
+Caso o ímpar da operação seja menor do que o par podemos substiuir o par fazendo 2 operações com estes números. Ex: $4$ e $3$ ficariam $11$ e $7$ realizando 2 operações.
+
+Porém nesses casos podemos aproveitar e aumentar o valor do ímpar de modo que todas as próximas operações ocorram 1 única vez ao realizar a operação entre maior ímpar atual e o maior número par do vetor.
+
+Logo podemos concluir que o número de operações será o número de pares + 1 (apenas se algum par requerir 2 operações).
+
+Complexidade esperada: $\mathcal{O}(N)$.

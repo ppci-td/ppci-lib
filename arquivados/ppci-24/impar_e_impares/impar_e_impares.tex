@@ -1,0 +1,95 @@
+Eiji tem um vetor com $N$ números, porém ele odeia os números pares e não quer que eles estraguem seu vetor. Ele pode fazer a seguinte operação quantas vezes quiser: Ele escolhe dois números de índices \textit{i} e \textit{j} ($1\leq i, j\leq N$) e substitui o menor deles pelo valor da soma entre eles, formalmente:
+
+$$
+\begin{cases}
+    \text{Caso } a_i > a_j: a_j = a_j + a_i \\
+    \text{Senão } a_i = a_i + a_j
+\end{cases}
+$$
+
+Porém ele não quer desperdiçar seu tempo realizando mais operações do que o necessário para se livrar de todos o pares.
+
+\subsection*{Entrada}
+
+A primeira linha contém um inteiro $N$ ($1 \leq N \leq 2\cdot 10^5$), o número de elementos do vetor
+
+A próxima linha contém $N$ inteiros $a_i$ $(1 \leq a_i \leq 10^9$), os valores de cada elemento do vetor.
+
+\subsection*{Saída}
+
+Imprima o número mínimo de operações que Eiji terá que realizar para se livrar de todos os pares em seu vetor, caso não seja possível se livrar de todos os pares imprima $-1$.
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3
+3 1 9
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+0
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5
+3 1 2 2 10
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2
+2 4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+-1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

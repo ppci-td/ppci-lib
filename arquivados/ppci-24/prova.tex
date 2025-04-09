@@ -1,0 +1,234 @@
+\documentclass[12pt,oneside]{article} % Uma Coluna e lingua portuguesa
+%\usepackage[T1]{fontenc}        % Permite digitar os acentos de forma normal
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+% \usepackage[portuges,brazil]{babel}
+\usepackage[brazilian]{babel}
+
+%\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphicx}    % Permite Gráficos
+%\usepackage{times}    % Fonte Times
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{nomencl}    % glossario
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[compact]{titlesec}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{csquotes}
+
+%=======================================================================
+
+% Hifenização das palavras desconhecidas pelo LaTeX
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\oddsidemargin  -3.0mm
+\evensidemargin -3.0mm
+\textwidth      167.0mm
+\topmargin      005.0mm
+\textheight     240.0mm
+\footskip       10.0mm
+
+\title{PPCI 2024 - Maratona de Programação}
+
+\author{Maratona de Programação}
+\date{19 de outubro de 2024}
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\parindent=0pt
+\setlength{\parskip}{7pt plus 1pt minus 2pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge PPCI 2024 - Maratona de Programação} \\
+\vspace{0.2cm}
+\textit{19 de outubro de 2024} \\
+\vspace{1.0cm}
+%\textbf{Sevidor BOCA:} \\
+%\texttt{\large http://maratona.c3sl.ufpr.br/boca/} \\
+%\vspace{1.0cm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.72]{capa.png}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.20]{logo-PPCI.png}
+\end{figure}
+\vspace{1.0cm}
+%\textbf{Organizadores:}\\
+%{\small Flávio Zavan} \\
+%{\small Ricardo Oliveira} \\
+\vspace{1.0cm}
+\end{center}
+
+\clearpage
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{PPCI 2024}
+\chead{Maratonas de Programação}
+\rhead{19 de outubro de 2024}
+\cfoot{\thepage}
+
+\newpage
+
+% Espaco para o create-zips.sh nao achar
+  \section*{Instruções Importantes}
+
+\begin{itemize}
+
+    \item Use a opção \textbf{Runs} para enviar suas soluções. Os problemas podem resolvidos em qualquer ordem e
+    linguagem (dentre C, C++ e Python, independentemente do problema);
+
+    \item Suas soluções serão testadas com várias entradas,
+    além das dadas como exemplo. Por isso, sua solução pode não ser
+    aceita mesmo se funcionar para os exemplos dados. Certifique-se que ela
+    funciona para todas as entradas possíveis;
+
+    \item A saída gerada deve ser \textit{exatamente} conforme
+    especificada. Em particular, \textbf{não} imprima instruções (``digite um
+            número'', ``a resposta é'', etc);
+
+    \item É garantido que todas as entradas usadas para teste estarão de acordo
+    com o enunciado, não sendo necessário testar se são válidas;
+
+    \item Ao enviar uma solução, o sistema irá responder uma das
+    seguintes respostas:
+    \begin{itemize}
+        \item \verb|Not answered yet|: a solução está sendo corrigida.
+        Aguarde um pouco e atualize a página;
+        \item \verb|YES|: solução aceita. Parabéns!
+        \item \verb|Wrong Answer|: a saída impressa pelo seu programa não é a
+        saída correta esperada, para alguma entrada de teste;
+        \item \verb|Presentation Error|: a saída impressa está correta, exceto
+        por espaços em branco e/ou quebras-de-linha faltando/sobrando;
+        \item \verb|Time Limit Exceeded|: o tempo de execução do seu programa
+        ultrapassou o tempo limite estipulado para o problema (ver tabela
+        abaixo). O tempo de execução da sua solução precisa ser menor;
+        \item \verb|Runtime Error|: seu programa gerou algum erro em tempo de
+        execução (``crashou'');
+        \item \verb|Compile Error|: seu programa não compila.
+    \end{itemize}
+
+    \item Todas as linhas, tanto na entrada quanto na saída, terminam com o
+    caractere de fim-de-linha ($\backslash n$), mesmo quando houver apenas uma única
+    linha na entrada e/ou saída;
+
+    \newpage
+    \item Sua solução deve processar cada arquivo de entrada no tempo máximo
+    estipulado para cada problema, dado pela seguinte tabela:
+
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c||c|}
+    \hline
+    \textbf{Problema} & \textbf{Nome} & \textbf{Tempo Limite (segundos)} \\
+    \hline
+    A & Arremesso de Triângulo & 1 \\
+    B & Bloons & 1 \\
+    C & Cofre Break & 1 \\
+    D & Double Casting & 1 \\
+    E & Estresse & 1 \\ % mudar talvez
+    F & Futebol & 1 \\
+    G & Graffiti & 1 \\
+    H & Herança & 1 \\ % mudar talvez
+    I & Ímpar e Impares & 1 \\
+    J & Joias do Tesouro & 1 \\
+    K & Kleber e a Convenção & 1 \\
+    L & Lâmpada Maldita & 1 \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+\end{itemize}
+
+\newpage
+\section*{A: Arremesso de Triângulo} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: arremesso.[c|cpp|py]\end{verbatim}
+\input{arremesso/arremesso.tex}
+
+\newpage
+\section*{B: Bloons} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: bloons.[c|cpp|py]\end{verbatim}
+\input{bloons/bloons.tex}
+
+% Quero a cor vermelha nesse problema!
+\newpage
+\section*{C: Cofre Break} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: cofre-break.[c|cpp|py]\end{verbatim}
+\input{cofre-break/cofre-break.tex}
+
+% Quero a cor azul nesse problema!
+\newpage
+\section*{D: Double Casting} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: double_casting.[c|cpp|py]\end{verbatim}
+\input{double_casting/double_casting.tex}
+
+\newpage
+\section*{E: Estresse} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: estresse.[c|cpp|py]\end{verbatim}
+\input{estresse/estresse.tex}
+
+\newpage
+\section*{F: Futebol} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: futebol.[c|cpp|py]\end{verbatim}
+\input{futebol/futebol.tex}
+\newpage
+
+\section*{G: Graffiti} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: graffiti.[c|cpp|py]\end{verbatim}
+\input{graffiti/graffiti.tex}
+
+\newpage
+\section*{H: Herança} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: heranca.[c|cpp|py]\end{verbatim}
+\input{heranca/heranca.tex}
+
+\newpage
+\section*{I: Ímpar e Impares} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: impar_e_impares.[c|cpp|py]\end{verbatim}
+\input{impar_e_impares/impar_e_impares.tex}
+
+\newpage
+\section*{J: Joias do Tesouro} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: joias.[c|cpp|py]\end{verbatim}
+\input{"joias/joias.tex"}
+
+\newpage
+\section*{K: Kleber e a Convenção} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: kleber_e_a_convencao.[c|cpp|py]\end{verbatim}
+\input{"kleber_e_a_convencao/kleber_e_a_convencao.tex"}
+
+\newpage
+\section*{L: Lâmpada Maldita} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: lampada.[c|cpp|py]\end{verbatim}
+\input{lampada/lampada.tex}
+
+\end{document}

@@ -1,0 +1,7 @@
+A ideia principal deste problema é encontrar o número de duplicatas dentro de um intervalo de magias em que a compra seja possível, para isto vamos utilizar ``two pointers" (dois ponteiros) no qual um marca o começo do intervalo e outro marca o final do intervalo, vamos chamá-los $P_l$ e $P_r$.
+
+$P_l$ e $P_r$ iniciam no $i_0$, iremos avançar $P_r$ até $i_{n-1}$. Caso o intervalo se torne maior do que $K$ iremos diminuir o intervalo avançando $P_l$. Devemos atualizar o número de duplicatas ao fazer qualquer avanço em $P_r$ ou $P_l$.
+
+Podemos utilizar da estrutura map para guardar a quantidade de vezes que um número apareceu dentro de nosso intervalo e assim determinar o número de pares em cada avanço.
+
+Complexidade esperada: $\mathcal{O}(N)$.

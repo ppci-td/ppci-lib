@@ -1,0 +1,104 @@
+Kubitschek e Chekskubit decidiram dar uma pausa em suas atividades criminosas para realizar um duelo no jogo Geoguessr. Neste jogo, cada jogador recebe uma imagem de uma localização aleatória do mundo e deve adivinhar onde essa localização se encontra baseando-se em elementos da imagem (placas, estradas, pessoas, vegetação, arquitetura, bandeiras, etc). Após deduzir a localização do local da imagem, o jogador marca um ponto no mapa mundial representando seu palpite. A pontuação é calculada com base na distância em relação à localização real, que é sempre na coordenada \((0, 0)\).
+
+Cada jogador começa com 5000 pontos de vida. A mecânica do jogo é a seguinte, toda partida começa no Round 1 e vai até o Round determinado previamente, a pontuação depois de cada Round é dada da seguinte forma:
+\begin{itemize}
+    \item Rounds ímpares: Round de dano. A diferença da distância do jogador mais distante do ponto real \((0, 0)\) para o jogador mais próximo é subtraída do total de pontos de vida do jogador mais distante.
+    \item Rounds pares: Round de cura. A diferença da distância do jogador mais distante do ponto real \((0, 0)\) para o jogador mais próximo é adicionada ao total de pontos de vida do jogador mais próximo, sem exceder o limite de 5000 pontos de vida.
+\end{itemize}
+
+O jogo termina quando um jogador chega a 0 pontos de vida ou quando ambos os jogadores completam o número de rounds definidos. Se, no último round, ambos os jogadores tiverem o mesmo total de pontos de vida, o resultado é um empate. Caso contrário, o jogador com mais pontos de vida é o vencedor.
+
+\subsection*{Entrada}
+
+\begin{itemize}
+\item A primeira linha contém um número inteiro \(N\) \((1 \leq N \leq 100)\), representando o número de rounds. 
+\item Em cada uma das próximas \(N\) linhas contém quatro números inteiros \(x_1, y_1, x_2, y_2\) (representando as coordenadas dos palpites dos jogadores em relação ao ponto real \((0, 0)\)), onde \(-10000 \leq x_1, y_1, x_2, y_2 \leq 10000\). Aqui, \((x_1, y_1)\) são as coordenadas do palpite de Kubitschek, e \((x_2, y_2)\) são as coordenadas do palpite de Chekskubit.
+\end{itemize}
+
+\subsection*{Saída}
+
+Imprima uma linha contendo  um dos três resultados possíveis da partida:
+\begin{itemize}
+    \item ``Kubitschek Venceu'' 
+    \item ``Chekskubit Venceu'' 
+    \item ``Empate'' 
+\end{itemize}
+
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{2.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2
+1 1 3 3
+4 4 6 6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{2.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+Kubitschek Venceu
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{2.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4
+3 3 4 4
+5 5 6 6
+7 7 8 8
+9 9 10 10
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{2.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+Empate
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{2.5in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3
+10000 10000 0 0
+10000 10000 0 0
+10000 10000 0 0
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{2.5in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+Chekskubit Venceu
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

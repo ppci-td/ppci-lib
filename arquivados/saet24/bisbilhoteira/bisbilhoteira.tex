@@ -1,0 +1,83 @@
+Nossa amiga Ana está enfrentando um problema curioso. Ela tem uma irmã bisbilhoteira que insiste em ler o seu diário sempre que tem a oportunidade. Para evitar que seus segredos sejam descobertos, Ana começou a codificar suas mensagens, repetindo os caracteres para deixar as frases mais confusas. Por exemplo, em vez de escrever ``amor", ela pode escrever ``aaammmoorrrr".
+
+No entanto, agora ela está com outro problema: as mensagens ficaram muito grandes, ocupando páginas inteiras do diário. Para ajudar Ana, precisamos criar um algoritmo que compacte essas mensagens, substituindo as sequências de caracteres repetidos pelo caractere seguido pelo seu numero de repetições.
+\subsection*{Entrada}
+
+A entrada consiste de um numero $n$ ($1 \leq n \leq 100$) indicando o tamanho da string, seguido pela string $s$, composta apenas por letras minusculas sem espaços.
+
+\subsection*{Saída}
+
+Uma linha contendo a string codificada.
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+10 aaaaabbccc
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+a5b2c3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+8 ppppccii
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+p4c2i2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+1 a
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+1a
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+

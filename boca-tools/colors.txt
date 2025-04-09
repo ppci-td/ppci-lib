@@ -1,0 +1,15 @@
+A FFFFFF branco
+B 000000 preto
+C FF0000 vermelho
+D 800000 grena
+E FFFF00 amarelo
+F 008000 verde
+G 0000FF azul
+H 000080 azul_marinho
+I FF00FF rosa
+J 800080 roxo
+K 00FF00 verde_limao
+L 00FFFF azul_claro
+M C0C0C0 prata
+N FF8000 laranja
+O A3794D marrom

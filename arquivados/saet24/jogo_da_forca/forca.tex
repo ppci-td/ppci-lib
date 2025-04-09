@@ -1,0 +1,111 @@
+João e seu irmão Miguel querem brincar de jogo da forca porém o papel da casa deles acabou. João teve a ideia de implementar um jogo da forca utilizando suas habilidades de programação porém o programa crashou no primeiro "Hello World". 
+
+Ajude os irmãos implementando um jogo da forca para que João e Miguel joguem, o João irá gerar a palavra para que Miguel tente adivinhar.
+
+\begin{itemize}
+
+    \item Todas as entradas por padrão serão letras minúsculas de ``a'' a ``z'' sem acentuação, espaço ou palavra composta;
+
+    \item Imprima a cada entrada o progresso de Miguel em acertar a palavra;
+    
+    \item Após 5 tentativas erradas do Miguel, encerre o jogo;
+    
+    \item Também encerre o jogo se o Miguel acertar a palavra;
+    
+    \item Não é necessário a implementação gráfica da forca;
+    
+\end{itemize}
+
+\subsection*{Exemplos de Entrada e Saída}
+
+
+\begin{itemize}
+
+    \item A primeira entrada será a palavra a ser descoberta, enviada pelo João;
+
+    \item As próximas n entradas serão enviadas pelo Miguel, sendo 100 o número máximo de n;
+    
+    \item As entradas do Miguel sempre serão apenas com um caractere minúsculo de ''a'' a ''z'';
+    
+    
+    \item A palavra enviada por João deve conter no máximo 10^5 caracteres;
+    
+
+\end{itemize}
+
+        \begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo 1 - Entrada}
+\begin{verbatim}
+ maratona
+    a
+    c
+    e
+    t
+    o
+    p
+    s
+    s
+    l
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo 1 - Saída}
+\begin{verbatim}
+    _ _ _ _ _ _ _ _
+    _ a _ a _ _ _ a
+    _ a _ a _ _ _ a
+    _ a _ a _ _ _ a
+    _ a _ a t _ _ a
+    _ a _ a t o _ a
+    _ a _ a t o _ a
+    _ a _ a t o _ a
+    _ a _ a t o _ a
+    _ a _ a t o _ a
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+    \begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo 2 - Entrada}
+\begin{verbatim}
+ toledo
+    t
+    o
+    l
+    e
+    o
+    d
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo 2 - Saída}
+\begin{verbatim}
+    _ _ _ _ _ _ 
+    t _ _ _ _ _ 
+    t o _ _ _ o
+    t o l _ _ o
+    t o l e _ o
+    t o l e _ o
+    t o l e d o
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

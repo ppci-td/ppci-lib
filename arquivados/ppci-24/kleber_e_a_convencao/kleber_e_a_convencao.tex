@@ -1,0 +1,74 @@
+Kleber está participando da sua primeira convenção de colecionadores de números. Nesta convenção cada colecionador pode doar ou receber números de outros colecionadores, alterando assim sua coleção.
+
+Há um estande de confirmação de coleção que dá uma insígnia ao colecionador se o $\oplus^\textbf{*}$(operação binária xor) de algum dos $E$ números distintos presentes no estande com TODOS os $N$ números da coleção atual de um colecionador resultarem em um número cuja representação binária contém apenas bits 1, desconsiderando zeros a esquerda. O estande dará apenas uma insígnia por coleção, independente de quantos números do estande atendam o requisito.
+
+Kleber fará e/ou receberá $Q$ doações de números durante a convenção e deseja saber qual o número máximo de insígnias que ele consegue obter. Ele pode ir ao estande para confirmar sua coleção quantas vezes quiser, essa verificação pode ser feita sempre que a coleção for alterada.
+
+Veja a explicação do exemplo teste:
+
+Suponha que Kleber tem uma coleção: $1, 2, 8$ e que o estande de confirmação tem os seguintes números: $4, 5, 7$.
+
+Durante a convenção aconteceram as seguintes doações:
+
+$+$ $3$ deixando sua coleção como: $1, 2, 3, 8$.
+
+$+$ $4$ deixando sua coleção como: $1, 2, 3, 4, 8$.
+
+$-$ $8$ deixando sua coleção como: $1, 2, 3, 4$.
+
+$-$ $1$ deixando sua coleção como: $2, 3, 4$.
+
+($+$ simbolizam que Kleber recebeu uma doação e $-$ simboliza que Kleber fez uma doação).
+
+Durante esta convenção Kleber conseguiu 2 insígnias:
+
+$1\oplus2\oplus8\oplus\textbf{4} = 15_{10} = 1111_2$.
+
+$1\oplus2\oplus3\oplus8\oplus\textbf{7} = 15_{10} = 1111_2$.
+
+\small{\textbf{*} $\oplus$ (xor) é a operação binária na qual: $1 \oplus 0 = 1$, $0 \oplus 1 = 1$, $0 \oplus 0 = 0$ e $1 \oplus 1 = 0$}. 
+
+\subsection*{Entrada}
+A primeira linha contém três inteiros $N$ e $E$ ($1 \leq N,E \leq 2 \cdot 10^5$), quantos números Kleber tem em sua coleção, quantos números distintos o estande de confirmação de coleção possui, respectivamente.
+
+A segunda linha contém $N$ números $a_i$ ($0 \leq a_i \leq 10^9$), a coleção de Kleber.
+
+A terceira linha contém $E$ números distintos do estande de confirmação de coleção $a_j$ ($0 \leq a_j \leq 10^9$).
+
+A quarta linha contém um inteiro $Q$ ($1 \leq Q \leq 2 \cdot 10^5$), quantas doações serão feitas e/ou recebidas por Kleber
+
+As próximas $Q$ linhas contém operações $-$ e/ou $+$ de números $a_k$ ($0 \leq a_k \leq 10^9$), a descrição das doações que aconteceram durante a convenção.
+
+\subsection*{Saída}
+Imprima o números máximo de insígnias que Kleber conseguirá receber.
+
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3 3
+1 2 8
+4 5 7
+4
++ 3
++ 4
+- 8
+- 1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

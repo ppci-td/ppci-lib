@@ -1,0 +1,110 @@
+Guilherme e Gabriela são dois irmãos apaixonados por arte. Desde pequenos, sempre competiram para ver quem conseguia criar o melhor desenho. Desta vez, eles decidiram transformar o muro de casa em uma obra de arte colorida, utilizando graffiti. Cada um tem uma cor favorita: Gabriela gosta de laranja, enquanto Guilherme prefere o roxo. No entanto, essa simples discordância transformou a atividade em uma competição. Como em qualquer disputa entre irmãos, o objetivo não é apenas grafitar, mas ver quem consegue cobrir a maior área do muro com sua cor favorita.
+
+O muro possui uma altura fixa de 1 metro e inicialmente está em branco. Gabriela e Guilherme se revezam para grafitar. Como Gabriela é mais velha, ela sempre começa. A cada turno, eles escolhem uma posição e uma distância horizontal no muro, e toda a área dentro dessa distância é grafitada.
+
+Como ambos são extremamente competitivos, eles podem grafitar por cima das cores já preenchidas pelo outro, e a cor mais recente prevalece em cada posição.
+
+\subsection*{Entrada}
+
+A primeira linha contém dois inteiros \textit{n} e \textit{m} ($1 \leq \textit{n} \leq 10^5, 1 \leq \textit{m} \leq 10^5$), representando o comprimento do muro em metros e o número de turnos, respectivamente.
+
+As próximas \textit{m} linhas descrevem as ações dos irmãos em cada turno.
+
+Cada uma dessas linhas contém dois inteiros \textit{$p_i$} e \textit{$d_i$} ($0 \leq \textit{$p_i$} < \textit{n}, 1 \leq \textit{$d_i$} \leq n - p_i$), onde \textit{$p_i$} é a posição inicial,  começando de 0, e \textit{d} é a distância grafitada a partir dessa posição.
+
+\subsection*{Saída}
+
+Imprima o nome do irmão que grafitou a maior área da parede. Se ambos grafitaram a mesma área, imprima "Empate".
+
+\newpage
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+8 4
+0 4
+4 4
+0 8
+3 3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+Gabriela
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+10 7
+0 10
+0 8
+2 7
+3 4
+4 2
+8 2
+5 1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+Guilherme
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+12 8
+0 1
+1 11
+5 6
+7 3
+2 2
+0 5
+0 8
+2 3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+Empate
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

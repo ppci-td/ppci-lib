@@ -1,0 +1,7 @@
+Dado alguma coleção precisamos realizar o xor entre todos os números presentes nela, vamos denominar o número resultante ``x".
+
+Em relação aos números do estande é importante escolhermos guarda-los em uma estrutura que possibilite busca logaritmica devido a complexidade, algumas opções seriam set ou map.
+
+Para determinar o número de insígnias vamos busca o complemento binário de \textbf{x} dentre os números do estande, a cada doação seja recebendo ou realiando iremos realizar o $x$ $\oplus$ $e_i$ e posteriormente fazer a busca pelo complemento binário de \textbf{x}.
+
+Complexidade esperada: $\mathcal{O}(N\cdot \text{log}n\cdot \text{log}x)$. \textbf{x} é o xor resultante.

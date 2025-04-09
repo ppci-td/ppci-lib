@@ -1,0 +1,97 @@
+Às vezes, é preciso ter aquela conversa difícil e dizer o que é necessário. É ou não é?
+
+Yara e sua colega Karen compartilham o mesmo apartamento. A papagaia da Karen, Lori, fica o dia todo presa na gaiola, sem ninguém para conversar, pois Karen estuda o dia inteiro e só chega de noite para dar atenção à coitada. Yara tem dó da passarinha, e precisa mostrar para Karen como a passarinha se sente abandonada e que é preciso tomar uma providência.
+
+Yara é estudante de biologia, e por observação chegou à hipótese de que papagaios falam muito quando estressados, e às vezes também podem falar ao contrário, de trás para frente. Então, ela gravou a papagaia ao longo de um dia e obteve uma string $S$, que contém letras correspondentes a sons, os quais podem ter sido falas da Lori ou ruídos de fundo. A bichana sempre fala a mesma palavra $P$, podendo ser de frente para trás ou de trás para frente. 
+
+É preciso que você conte em quantos momentos, ao longo da gravação, houve um som que possa ter sido a Lori falando. Dessa forma, Yara poderá estudar o caso, e quem sabe mostrar para Karen como o comportamento da Lori é consequência da tristeza e estresse de estar sozinha e sem interação o dia inteiro.
+
+
+\subsection*{Entrada}
+A primeira linha contém uma string $S$, de tamanho $|S|$ ($1\leq |S|\leq 2\cdot 10^5$).
+
+A segunda linha contém uma string $P$, de tamanho $|P|$ ($1\leq |P|\leq 2\cdot 10^5$).
+
+Ambas strings são formadas por caracteres minúsculos do alfabeto inglês (i.e. de \texttt{`a'} a \texttt{`z'}).
+
+
+\subsection*{Saída}
+Imprima a quantidade de momentos distintos da gravação em que houve um som que possa ser a papagaia falando.
+
+
+%----- Exemplo 1 -----%
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+zzzgrrauauzzz
+uauarrg
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+orolorolouolorolol
+loro
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+arararara
+arara
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,121 @@
+Ricardinho e seu avô Gepeto estão passeando em um domingo à noite pelo circo até que se deparam com um jogo muito interessante, 
+o Jogo do Tigrinho, que consiste em a partir de dois textos escritos por diferentes pessoas, determinar se um terceiro texto foi escrito ou não por uma daquelas pessoas.
+De fato suas regras são bem simples:
+\begin{itemize}
+    \item O participante irá ler os dois primeiros textos, um de cada autor.
+    \item Em seguida lê o terceiro texto, desta vez com autor desconhecido.
+    \item Por fim, infere quem o escreveu sendo \textbf{1} para o primeiro, \textbf{2} para o segundo autor e \textbf{0} caso não foi escrito por nenhum deles.
+    \item Os textos não precisam ter algum significado real, são apenas palavras ou sequências de letras espaçadas.
+    \item Cada palavra que aparece nos textos se trata de um evento independente.
+\end{itemize}
+
+Seu papel é ajudar o Gepeto, um craque da probabilide (visto que determinada palavra tem diferentes probabilidades de 
+aparição para cada autor, baseado nas evidencias fornecidas), a desvendar de quem é o texto escrito.
+
+\subsection*{Entrada}
+
+A primeira linha contém um número $a$ $(10 \leq a \leq 10^6)$, indicando o tamanho do texto do primeiro autor. 
+Na próxima linha uma sequência de $a$ palavras com tamanho $l$ $(1 \leq l \leq 15)$ são apresentadas, correspondentes ao texto 1.
+
+A terceira linha contém um número $b$ $(10 \leq b \leq 10^6)$, indicando o tamanho do texto do segundo autor.
+Na próxima linha uma sequência de $b$ palavras com tamanho $l$ $(1 \leq l \leq 15)$ são apresentadas, correspondentes ao texto 2.
+
+A quinta linha contém um número $n$, que indica o tamanho do texto com autor desconhecido.
+E na próxima linha, $n$ palavras correspondente a este texto são apresentadas.
+
+\subsection*{Saída}
+A saída deve ser, de acordo com as probabilidades:
+\begin{itemize}
+    \item $1$ caso a maior probabilidade seja do primeiro autor.
+    \item $2$ caso a maior probabilidade seja do segundo autor.
+    \item $0$ caso a probabilidade seja 0 para ambos.
+\end{itemize}
+%----- Exemplo 1 -----%
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|p{4in}|p{2in}|}
+\hline
+\begin{minipage}[t]{3in}
+\raggedright
+\textbf{Exemplo de entrada} \\
+\begin{verbatim}
+20
+um dos personagens da disney que aparece 
+no filme do shrek e o pinoquio junto de 
+outras famosas princesas ficticias
+20
+voce sabe quem foi gepeto ele e um 
+personagem ficticio italiano entalhador de 
+madeira idoso e pobre criador do pinoquio
+7
+o pinoquio foi criado pelo italiano gepeto
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\raggedright
+\textbf{Exemplo de saída} \\
+\begin{verbatim}
+2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|p{4in}|p{2in}|}
+\hline
+\begin{minipage}[t]{3in}
+\raggedright
+\textbf{Exemplo de entrada} \\
+\begin{verbatim}
+86
+no futebol os jogadores correm pelo campo
+driblando adversarios enquanto passam a 
+bola de pe em pe o objetivo principal e 
+marcar um gol acertando a bola na rede 
+alem da trave a preparacao fisica e mental 
+e essencial para garantir bom desempenho 
+o jogo e rapido exigindo precisao e 
+trabalho em equipe a grama do campo e o 
+palco onde a acao acontece e a vitoria e 
+o sonho de todos os envolvidos cada 
+segundo conta e a tecnica de controle 
+da bola e crucial
+81
+na natacao os atletas deslizam pela agua 
+avancando rapidamente pela raia a tecnica 
+precisa aliada a forca e a resistencia e 
+o que garante o sucesso assim como no 
+futebol a preparação fisica e mental e 
+indispensavel cada bracada na piscina deve 
+ser calculada para maximizar a velocidade 
+o tempo e um fator determinante e o 
+objetivo e sempre cruzar a linha de chegada 
+primeiro o ambiente de competicao como no 
+campo de futebol exige foco e concentracao 
+totais  dos nadadores
+11
+a preparacao fisica e mental e crucial 
+para vencer no futebol
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\raggedright
+\textbf{Exemplo de saída} \\
+\begin{verbatim}
+1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+\\ \hline
+\end{tabular}
+\end{table}
+\newpage

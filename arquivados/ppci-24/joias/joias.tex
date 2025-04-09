@@ -1,0 +1,71 @@
+Você é um explorador em uma perigosa expedição nas selvas de Zathura, uma terra lendária conhecida por esconder um misterioso tesouro. 
+Diz a lenda que esse tesouro é protegido por enigmas e armadilhas que só podem ser vencidos por aqueles que sabem o caminho mais curto até ele.
+
+Determine o número mínimo de movimentos que você precisa para sair de sua posição inicial \((sx, sy)\) e alcançar a posição do tesouro \((tx, ty)\). 
+Lembre-se de que a selva é cheia de desafios, e você só pode mover-se nas quatro direções: para cima, para baixo, para a esquerda e para a direita. 
+Não é possível atravessar as bordas da selva.
+
+\subsection*{Entrada}
+A primeira linha contém um inteiro \(N\) \((1 \leq N \leq 1000)\), representando o tamanho do tabuleiro \(N \times N\).
+
+A segunda linha contém dois inteiros \(sx\) e \(sy\) \((0 \leq sx, sy < N)\), que representam as coordenadas de sua posição inicial no tabuleiro.
+
+A terceira linha contém dois inteiros \(tx\) e \(ty\) \((0 \leq tx, ty < N)\), que representam as coordenadas do tesouro.
+
+\subsection*{Saída}
+
+Imprima o número mínimo de movimentos que o explorador precisa fazer para alcançar o tesouro.
+
+\subsection*{Exemplo de Entrada e Saída}
+
+%----- Exemplo 1 -----%  
+\begin{table}[!h]  
+\centering  
+\begin{tabular}{|l|l|}  
+\hline  
+\begin{minipage}[t]{3in}  
+\textbf{Exemplo de entrada}  
+\begin{verbatim}  
+5  
+0 0  
+3 3  
+\end{verbatim}  
+\vspace{1mm}
+\end{minipage}  
+&  
+\begin{minipage}[t]{3in}  
+\textbf{Exemplo de saída}  
+\begin{verbatim}  
+6  
+\end{verbatim}  
+\vspace{1mm}
+\end{minipage} \\  
+\hline  
+\end{tabular}  
+\end{table}
+
+%----- Exemplo 2 -----%  
+\begin{table}[!h]  
+\centering  
+\begin{tabular}{|l|l|}  
+\hline  
+\begin{minipage}[t]{3in}  
+\textbf{Exemplo de entrada}  
+\begin{verbatim}  
+7  
+1 1  
+5 5  
+\end{verbatim}  
+\vspace{1mm}
+\end{minipage}  
+&  
+\begin{minipage}[t]{3in}  
+\textbf{Exemplo de saída}  
+\begin{verbatim}  
+8  
+\end{verbatim}  
+\vspace{1mm}
+\end{minipage} \\  
+\hline  
+\end{tabular}  
+\end{table}

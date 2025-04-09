@@ -1,0 +1,95 @@
+No jogo \textbf{Bloons Tower Defense}, existem macacos que defendem o território deles, que é constantemente atacado por uma sequência de balões com diferentes camadas de resistência. Cada macaco pode arremessar dardos que dão dano e destroem um número específico de camadas de um balão. Cada balão, por sua vez, tem um número de camadas a serem destruídas. Um balão só é totalmente destruído quando o último dardo que o acertar der dano \textbf{exatamente} igual à quantidade de camadas restantes do balão.
+
+Dada uma sequência de $N$ balões, onde cada balão tem $h_i$ camadas (ou seja, o balão $i$ tem resistência $h_i$), temos disponíveis $K$ tipos de macacos, onde o macaco do tipo $j$ pode arremessar um dardo que destrói exatamente $d_j$ camadas de um balão.
+
+Você deve determinar o número mínimo de dardos necessários para destruir completamente todos os balões da sequência. Se não for possível destruir todos os balões, retorne -1. E lembrando que um balão é totalmente destruído somente se os dano causado nele é \textbf{exatamente} o número de camadas dele. E ressaltando também que o mesmo macaco pode arremessar dardos quantas vezes quiser em qualquer balão.
+
+\subsection*{Entrada}
+    A primeira linha contém dois inteiros $N$ $(1 \leq N \leq 1000)$ e $K$ $(1 \leq K \leq 100)$, representando o número de balões e o número de macacos, respectivamente.
+
+    A segunda linha contém $N$ inteiros, onde o $i$-ésimo inteiro representa $h_i$ $(1 \leq h_i \leq 1000)$, o número de camadas de resistência do $i$-ésimo balão.
+
+    A terceira linha contém $K$ inteiros, onde o $j$-ésimo inteiro representa $d_j$ $(1 \leq d_j \leq 1000)$, o número de camadas que o dardo arremessado pelo $j$-ésimo macaco consegue destruir.
+
+\subsection*{Saída}
+Imprima o número mínimo de dardos necessários para destruir todos os balões. Se não for possível destruir todos os balões, imprima -1.
+
+%----- Exemplo 1 -----%
+\newpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4 3
+5 10 6 8
+2 3 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+7
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2 2
+7 11
+2 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2 2
+7 8
+3 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+-1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

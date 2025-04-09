@@ -1,0 +1,7 @@
+É necessário utilizar um algoritmo para busca de um padrão em um texto. Um destes algoritmos é o \href{https://cp-algorithms.com/string/prefix-function.html}{KMP (Knuth-Morris-Pratt)}, que tem complexidade de pior caso $\mathcal{O}(|S|+|P|)$.
+
+O algoritmo deve ser executado duas vezes sobre $S$: uma vez procurado por $P$, e outra vez procurando pelo reverso de $P$, aqui denotado por $P'$. Então, basta contar a quantidade de vezes que $P$ e $P'$ pode ser visto, e imprimir o resultado.
+
+Um \textit{corner case}\footnote{Caso especial onde a regra geral não se aplica; caso limite.} é se o padrão $P$ procurado é um palíndromo (ou seja, se $P=P'$). A exemplo, se é buscado o palíndromo $P=``\text{reviver}''$, no texto $S=``\text{xxreviverxx}''$, em um mesmo momento (a partir do terceiro caractere de $S$) a papagaia poderia ter falado tanto $P$ quanto $P'$. No entanto, note que se trata do \textbf{mesmo} momento, e não de dois momentos distintos contabilizados separadamente. 
+
+Dessa forma, caso $P$ seja palíndromo, deve-se fazer apenas uma execução do KMP, ou dividir o resultado final por 2. Esse caso é retratado no Exemplo 3, onde $S=``arararara''$ e $P=``arara''$, cuja saída deve ser $3$.

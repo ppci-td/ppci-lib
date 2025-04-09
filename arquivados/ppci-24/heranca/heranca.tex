@@ -1,0 +1,71 @@
+Você acaba de receber uma notícia inesperada: seu tio-avô, morador de Nlogônia, faleceu e deixou uma herança especial para você. Porém, sabendo da sua paixão por problemas de lógica e desafios matemáticos, ele deixou um enigma como parte de sua herança.
+
+Na casa dele, você encontra uma mochila mágica com um limite de peso $W$ que pode ser carregado dentro dela. Junto à mochila, há uma carta explicando que ela pode ser preenchida com uma série de itens valiosos, cada um com um peso e um valor específico. No entanto, você não precisa pegar os itens inteiros – pode escolher levar apenas uma fração de cada item, se assim desejar.
+
+Seu desafio é simples: escrever um algoritmo que defina o valor máximo dos itens para o peso $w$ de sua mochila.
+
+\subsection*{Entrada}
+
+A primeira linha contém 2 inteiros $N$ ($1 \leq N \leq 10^5$) e $W$ ($1 \leq W \leq 10^3$) que indicam, respectivamente, o número de itens disponíveis e o peso máximo suportado pela mochila.
+
+As próximas $N$ linhas contêm 2 inteiros $P$ ($1 \leq P \leq 10^6$) e $V$ ($1 \leq V \leq 10^8$) indicando o peso e o valor de cada item.
+
+\subsection*{Saída}
+
+Imprima um número com 2 casas após a vírgula, indicando o valor máximo.
+
+Utilize números com precisão dupla.
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3 50
+10 60
+20 100
+30 120
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+240.00
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+2 50
+20 10
+50 3
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+11.80
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+

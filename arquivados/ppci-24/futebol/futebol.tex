@@ -1,0 +1,124 @@
+O futebol é o esporte mais popular do mundo, com entusiastas espalhados globalmente. Rafael, além de ser um grande fã do esporte, também é analista de desempenho de um clube de futebol profissional chamado Universitários FC.
+
+O técnico do time solicitou que Rafael desenvolvesse um programa para ajudar o time a melhorar suas chances de marcar gols. Contudo, Rafael não é especialista em programação, e por isso ele decidiu pedir a sua ajuda para resolver este problema.
+
+A sua tarefa é criar um programa que analise se é possível que o Universitários FC troque passes de maneira eficiente, de modo que a bola saia dos pés do goleiro e chegue até o centroavante, o jogador responsável por finalizar as jogadas.
+
+A entrada do programa consiste nas possíveis opções de passes entre os jogadores. Cada passe indica que a bola pode ser passada de um jogador X para um jogador Y (e vice-versa). Note que as opções de passes podem ser limitadas, o programa deve encontrar o tamanho do menor caminho possível que a bola fará entre os jogadores. Em outras palavras, o programa deve mostrar a quantidade mínima de jogadores que participarão na sequência de passes, de forma que o número total de jogadores envolvidos seja o menor possível.
+
+\subsection*{Entrada}
+
+A primeira linha contém um número inteiro $N$ ($1 \leq N \leq 55$), representando o número de passes possíveis.
+
+As próximas $N$ linhas descrevem as opções de passe, onde a bola pode ser passada do jogador X para o jogador Y e vice-versa. Os jogadores são numerados de 1 a 11, sendo que o jogador 1 é o goleiro e o jogador 9 é o centroavante.
+
+\subsection*{Saída}
+
+Imprima a quantidade mínima de jogadores que participarão da troca de passes, incluindo o goleiro (jogador 1) e o centroavante (jogador 9).
+
+Caso não seja possível completar a sequência de passes até o centroavante, imprima $-1$.
+
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+11
+1 3
+1 4
+3 2
+4 6
+3 5
+5 10
+5 8
+10 8
+2 7
+10 11
+11 9
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+9
+1 3
+1 4
+3 2
+4 6
+4 5
+5 10
+5 8
+11 9
+9 7
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+-1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+13
+1 3
+1 4
+3 2
+4 6
+3 5
+4 5
+5 10
+5 8
+10 11
+8 7
+1 9
+11 9
+7 9
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

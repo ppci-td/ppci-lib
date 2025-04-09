@@ -1,0 +1,100 @@
+Carlinhos é um grande colecionador de balões e, para proteger sua preciosa coleção, decidiu trancá-la em um cofre com uma senha \textit{s}, composta por \textit{n} números inteiros.
+Porém, a memória de Carlinhos não é a das melhores, então ele decidiu escrever a senha em um papel e guardá-la em um lugar seguro.
+No entanto, para garantir que ninguém descubra a senha, Carlinhos resolveu anotá-la de maneira camuflada, seguindo uma regra especial:
+
+\begin{itemize}
+    \item A maior sequência de números distintos, ou seja, a maior sequência contínua de números onde nenhum número aparece mais de uma vez, foi invertida.
+    \item Caso haja mais de uma sequência de maior tamanho, apenas a primeira, da esquerda para a direita, será invertida.
+    \item O restante dos números foi mantido na mesma ordem original.
+\end{itemize}
+
+Agora, anos depois, Carlinhos quer pegar seu balão vermelho favorito, mas sua memória falhou novamente. 
+Ele não lembra qual sequência havia sido invertida, e tudo o que tem é a versão modificada da senha que ele escreveu no papel.
+
+A sua tarefa é ajudar Carlinhos a pegar o seu balão favorito, descobrindo a senha correta do cofre.
+
+\subsection*{Entrada}
+
+A primeira linha contém um inteiro $n$ ($1 \leq n \leq 10^5$), que representa a quantidade de números da senha.
+
+A segunda linha contém $n$ inteiros $s_i$ ($0 \leq s_i \leq 10^9$), que representam os dígitos da senha como foram escritos no papel.
+
+\subsection*{Saída}
+
+Imprima a senha correta para o cofre, separando os números por espaços. Não imprima o espaço após o último número.
+
+\newpage
+%----- Exemplo 1 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+7
+1 1 2 3 4 5 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+1 5 4 3 2 1 5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 2 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+9
+1 2 1 3 4 7 3 5 7
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+1 7 4 3 1 2 3 5 7
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+%----- Exemplo 3 -----%
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+6
+42 42 43 43 44 44
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+42 43 42 43 44 44
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
