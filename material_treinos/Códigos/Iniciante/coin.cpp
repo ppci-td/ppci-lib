@@ -19,7 +19,7 @@ vector<ll> guloso(const vector<ll>& m, ll total) {
 }
 
 vector<ll> pd(const vector<ll>& m, ll total) {
-    vector<ll> dp(total + 1, INT_MAX);
+    vector<ll> dp(total + 1, INT_MAX); //atencao para nao chamar esse vetor de "pd" pq chamaria a função recursivamente
     vector<ll> pai(total + 1, -1);
     
     dp[0] = 0;
