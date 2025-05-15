@@ -19,7 +19,7 @@ vector<ll> guloso(const vector<ll>& m, ll total) {
 }
 
 int main() {
-    vector<ll> moedas = {1, 2, 5, 10, 20, 50, 100, 200};
+    vector<ll> moedas = {};
     ll n = ;
     
     vector<ll> total = guloso(moedas, n);
